@@ -1,28 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+	<!--w3c copy-->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <header class="showcase">
     <div class="showcase-top">
         <img src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
-        <a href="#" class="btn btn-rounded">Sign In</a>
+		<a href="{% url 'register' %}" class="btn btn-rounded signup">Sign Up</a>
+        <a href="{% url 'login' %}" class="btn btn-rounded">Sign In</a>
+		<a href="{% url 'logout' %}" class="btn btn-rounded"><i class="fa fa-sign-out"></i></a>
     </div>
     <div class="showcase-content">
         <h1>See what's next</h1>
         <p>Watch anywhere. Cancel Anytime</p>
         <a href="#" class="btn btn-xl"
-            >Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i
+            >Watch Free For 30 Days <i class="fa fa-chevron-right btn-icon"></i
         ></a>
     </div>
 </header>
 <section class="tabs">
     <div class="container">
         <div id="tab-1" class="tab-item tab-border">
-            <i class="fas fa-door-open fa-3x"></i>
+            <i class="fa fa-ban fa-3x"></i>
             <p class="hide-sm">Cancel at any time</p>
         </div>
         <div id="tab-2" class="tab-item">
-            <i class="fas fa-tablet-alt fa-3x"></i>
+            <i class="fa fa-globe fa-3x"></i>
             <p class="hide-sm">Watch anywhere</p>
         </div>
         <div id="tab-3" class="tab-item">
-            <i class="fas fa-tags fa-3x"></i>
+            <i class="fa fa-money fa-3x"></i>
             <p class="hide-sm">Pick your price</p>
         </div>
     </div>
@@ -112,15 +129,15 @@
                     </tr>
                     <tr>
                         <td>HD Available</td>
-                        <td><i class="fas fa-times"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                     <tr>
                         <td>Ultra HD Available</td>
-                        <td><i class="fas fa-times"></i></td>
-                        <td><i class="fas fa-times"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                     <tr>
                         <td>Screens you can watch on at the same time</td>
@@ -130,27 +147,27 @@
                     </tr>
                     <tr>
                         <td>Watch on your laptop, TV, phone and tablet</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                     <tr>
                         <td>Unlimited movies and TV shows</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                     <tr>
                         <td>Cancel anytime</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                     <tr>
                         <td>First month free</td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
-                        <td><i class="fas fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -499,6 +516,14 @@ img {
 	outline: none;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
 	border-radius: 2px;
+}
+
+.showcase-top .signup{
+	right: 7%;
+}
+
+.showcase-top signout{
+	right: 14%;
 }
 
 .btn:hover {
