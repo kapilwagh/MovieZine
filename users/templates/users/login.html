@@ -14,7 +14,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
-
+<header class="showcase">
+	<div class="showcase-top">
+		<img src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
+	</div>
+</header>
 <div class="signup-form">
     <form action="" method="post">
 		{% csrf_token %}
@@ -74,6 +78,19 @@ body {
   background-image: url(https://media.istockphoto.com/photos/friends-in-the-cinema-picture-id1180701083?b=1&k=20&m=1180701083&s=170667a&w=0&h=i4RjlXSocbLiBpruz5KQY4wUlHZ9WX8bAVIMGf1qclw=);
   background-position: center;
   }
+  .showcase-top {
+	position: relative;
+	z-index: 2;
+	height: 90px;
+}
+.showcase-top img {
+	width: 170px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 0;
+}
 .form-control {
 	font-size: 15px;
 	font-family: 'Montserrat', sans-serif;

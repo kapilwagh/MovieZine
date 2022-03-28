@@ -1,4 +1,5 @@
 import csv, io
+import re
 import sys
 import urllib
 from csv import reader
@@ -97,11 +98,27 @@ def contact(request):
     context={'form':form}    
     return render(request, 'users/contact.html', context)
 
+@login_required
 def profile(request):
     return render(request, 'users/profile.html')
 
 def userUpload(request):
     return render(request, 'users/userUpload.html')
 
+def terms(request):
+    return render(request, 'users/faq.html')
+
+def faq(request):
+    return render(request, 'users/faq.html')
+
+@login_required
 def watchlist(request):
     return render(request, 'users/watchlist.html') 
+
+@login_required
+def comments(request):
+    return render(request, 'users/comments.html')
+
+@login_required
+def rating(request):
+    return render(request, 'users/rating.html')

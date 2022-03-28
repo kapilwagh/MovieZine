@@ -13,7 +13,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
-	<body>
+<body>
+	<header class="showcase">
+		<div class="showcase-top">
+			<img src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
+		</div>
+	</header>
   <!--Attributes-->
 <div class="signup-form">
     <form action="" method="POST">
@@ -109,8 +114,33 @@ body {
   background-attachment: fixed;
   background-size: cover;
   /* background-image: url(https://images.unsplash.com/photo-1591940765155-0604537032a5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTEyfHx1bmlzZXglMjBmaXRuZXNzJTIwZ3ltbWluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60); */
-  background-image: url(https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW92aWVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+  background-image: url(https://media.istockphoto.com/photos/happy-latin-american-couple-at-the-movies-picture-id688782978?b=1&k=20&m=688782978&s=170667a&w=0&h=2TNk6GvMF4I92-nl3IWMRQVsoPWQcTKdlZR0sUVQwG4=);
   background-position: center;
+}
+/* .showcase::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1; */
+	/* background: rgba(0, 0, 0, 0.6); */
+	/* box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000; */
+/* } */
+
+.showcase-top {
+	position: relative;
+	z-index: 2;
+	height: 90px;
+}
+.showcase-top img {
+	width: 170px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: 0;
 }
 .form-control {
 	font-size: 15px;
