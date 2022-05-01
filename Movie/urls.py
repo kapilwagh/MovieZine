@@ -1,7 +1,7 @@
-"""MovieZine URL Configuration
+"""Movie URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,17 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
-from django.conf import settings
 from django.conf.urls.static import static
+from django.conf import settings
+from App.views import (
+    home,
+    search_results,
+    login_view,
+    registration_view,
+    logout_view,
+    my_movies
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls')),
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
-
-
+    path('', home, name='home'),
+    path('searchbar/', search_results, name='searchbar'),
+    path('login/', login_view, name='login_view'),
+    path('register/', registration_view, name='registration_view'),
+    path('logout/', logout_view, name="logout"),
+    path('favourites/', my_movies, name="favourites"),
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
