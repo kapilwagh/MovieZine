@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+"""
 from App.views import (
     home,
     search_results,
@@ -25,13 +26,15 @@ from App.views import (
     logout_view,
     my_movies
 )
-
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
+    """
     path('', home, name='home'),
     path('searchbar/', search_results, name='searchbar'),
     path('login/', login_view, name='login_view'),
     path('register/', registration_view, name='registration_view'),
     path('logout/', logout_view, name="logout"),
     path('favourites/', my_movies, name="favourites"),
+    """
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

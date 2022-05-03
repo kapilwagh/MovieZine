@@ -29,7 +29,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['aniketmovieapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App',
-    'embed_video'
+    #'App',
+    #'embed_video'
 ]
 
 MIDDLEWARE = [
@@ -75,7 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Movie.wsgi.application'
-AUTH_USER_MODEL = 'App.Account'
+#AUTH_USER_MODEL = 'App.Account'
 
 
 # Database
